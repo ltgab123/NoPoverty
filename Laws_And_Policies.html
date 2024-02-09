@@ -96,17 +96,6 @@
                         section.style.transform = 'translateY(0)';
                     }
                 });
-            } else {
-                // Scrolling up
-                const sections = document.querySelectorAll('.section');
-                sections.forEach(section => {
-                    const sectionPosition = section.getBoundingClientRect().top;
-                    const screenHeight = window.innerHeight;
-                    if (sectionPosition > screenHeight || sectionPosition < 0) {
-                        section.style.opacity = '0';
-                        section.style.transform = 'translateY(50px)';
-                    }
-                });
             }
 
             lastScrollPosition = currentScrollPosition;
