@@ -80,16 +80,36 @@
     </div>
 
     <script>
+        let lastScrollPosition = 0;
+
         window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const sectionPosition = section.getBoundingClientRect().top;
-                const screenHeight = window.innerHeight;
-                if (sectionPosition < screenHeight * 0.75) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }
-            });
+            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollPosition > lastScrollPosition) {
+                // Scrolling down
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenHeight = window.innerHeight;
+                    if (sectionPosition < screenHeight * 0.75) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            } else {
+                // Scrolling up
+                const sections = document.querySelectorAll('.section');
+                sections.forEach(section => {
+                    const sectionPosition = section.getBoundingClientRect().top;
+                    const screenHeight = window.innerHeight;
+                    if (sectionPosition > screenHeight * 0.75) {
+                        section.style.opacity = '0';
+                        section.style.transform = 'translateY(50px)';
+                    }
+                });
+            }
+
+            lastScrollPosition = currentScrollPosition;
         });
     </script>
 </body>
