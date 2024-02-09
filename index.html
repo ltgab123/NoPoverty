@@ -78,9 +78,10 @@
       margin-top: 20px; /* Adjust as needed */
     }
     .image-container img {
-      width: 300px; /* Adjust width as needed */
-      height: auto;
-      margin: 0 20px; /* Adjust spacing between images */
+      max-width: calc(33% - 20px); /* Adjust width as needed */
+      max-height: 200px;
+      margin: 0 10px; /* Adjust spacing between images */
+      object-fit: cover;
     }
   </style>
 </head>
