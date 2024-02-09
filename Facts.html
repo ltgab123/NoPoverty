@@ -95,22 +95,20 @@
 
     <script>
         let lastScrollPosition = 0;
+        const sections = document.querySelectorAll('.section');
 
         window.addEventListener('scroll', function() {
             const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-            const sections = document.querySelectorAll('.section');
 
-            if (currentScrollPosition > lastScrollPosition) {
-                // Scrolling down
-                sections.forEach(section => {
-                    const sectionPosition = section.getBoundingClientRect().top;
-                    const screenHeight = window.innerHeight;
-                    if (sectionPosition < screenHeight * 0.75) {
-                        section.style.opacity = '1';
-                        section.style.transform = 'translateY(0)';
-                    }
-                });
-            }
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+                
+                if (sectionPosition < screenHeight * 0.75) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
 
             lastScrollPosition = currentScrollPosition;
         });
