@@ -17,21 +17,16 @@
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
-        .law1 {
+        .law1, .policy1 {
             background-color: lightcyan;
         }
 
-        .law2 {
-            background-color: lightpink;
-        }
-
-        .policy1 {
-            background-color: lightcyan;
-        }
-
-        .policy2 {
+        .law2, .policy2 {
             background-color: lightpink;
         }
 
@@ -84,5 +79,18 @@
         </p>
     </div>
 
+    <script>
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const sectionPosition = section.getBoundingClientRect().top;
+                const screenHeight = window.innerHeight;
+                if (sectionPosition < screenHeight * 0.75) {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
