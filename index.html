@@ -11,9 +11,6 @@
       padding: 0;
       font-family: Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #ffd1dc, #aafbff);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     header {
       background: linear-gradient(to right, #ffd1dc, #aafbff);
@@ -21,9 +18,6 @@
       text-align: center;
       color: #333;
       width: 100%;
-      position: fixed;
-      top: 0;
-      z-index: 999;
     }
     .container {
       background: linear-gradient(to right, #ffd1dc, #aafbff);
@@ -32,7 +26,7 @@
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       text-align: center;
       max-width: 800px;
-      margin-top: 100px;
+      margin: 20px auto;
       color: #333;
     }
     h1 {
@@ -79,23 +73,18 @@
     }
     .image-container {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
       align-items: center;
-      margin-top: 80px; /* Adjust as needed */
+      margin-top: 20px; /* Adjust as needed */
     }
     .image-container img {
-      width: 200px; /* Adjust width as needed */
+      width: 300px; /* Adjust width as needed */
       height: auto;
-      margin: 0 10px; /* Adjust spacing between images */
+      margin: 0 20px; /* Adjust spacing between images */
     }
   </style>
 </head>
 <body>
-<div class="image-container">
-  <img src="download.jpeg" alt="Image 1">
-  <img src="logo.jpg" alt="Image 2">
-  <img src="1.2.png" alt="Image 3">
-</div>
 <header>
   <h1>No Poverty Homepage</h1>
   <nav class="links">
@@ -103,6 +92,11 @@
     <a href="Facts.html" class="link"><i class="fas fa-lightbulb"></i>Facts</a>
   </nav>
 </header>
+<div class="image-container">
+  <img src="download.jpeg" alt="Image 1">
+  <img src="logo.jpg" alt="Image 2">
+  <img src="1.2.png" alt="Image 3">
+</div>
 <div id="about" class="container">
   <h2>About Poverty</h2>
   <p>Poverty is a complex issue that affects millions of people worldwide. It is often defined as a lack of access to basic necessities such as food, shelter, education, and healthcare.</p>
