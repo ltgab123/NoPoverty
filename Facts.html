@@ -51,7 +51,7 @@
     </style>
 </head>
 <body>
-    <b><u><p style="font-size: 80px;">Facts</p></u></b>
+    <b><u><p style="font-size: 100px;">Facts</p></u></b>
     <div class="section fact1">
         <h1>Facts About The SDG - 'No Poverty'</h1>
    
@@ -108,16 +108,6 @@
                     if (sectionPosition < screenHeight * 0.75) {
                         section.style.opacity = '1';
                         section.style.transform = 'translateY(0)';
-                    }
-                });
-            } else {
-                // Scrolling up
-                sections.forEach((section, index) => {
-                    const sectionPosition = section.getBoundingClientRect().top;
-                    const screenHeight = window.innerHeight;
-                    if ((index !== sections.length - 1 && sectionPosition > screenHeight) || sectionPosition < 0) {
-                        section.style.opacity = '0';
-                        section.style.transform = 'translateY(50px)';
                     }
                 });
             }
