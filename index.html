@@ -80,22 +80,24 @@
     .link i {
       margin-right: 10px;
     }
-      {
+     {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 200vh;
+    align-items: flex-start; /* Align items at the top */
+    height: 100vh;
     margin: 0;
   }
   .image-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
     max-width: 800px; /* adjust as needed */
     width: 100%;
   }
   .image-container img {
-    max-width: 30%; /* adjust as needed */
+    width: 100%; /* Make images fill container width */
     height: auto;
+    margin-bottom: 10px; /* Adjust spacing between images */
   }
   </style>
 </head>
