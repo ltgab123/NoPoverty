@@ -17,9 +17,6 @@
             padding: 20px;
             margin: 20px;
             border-radius: 10px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
         }
 
         .fact1 {
@@ -92,26 +89,5 @@
        
         <p style="font-size: 25px;">As our final solution we decided that we will raise awareness about the policies and laws made by the government for the people who are suffering  from poverty so that they can come out of the cycle of the poverty and become a part of the main stream of the society.</p>
     </div>
-
-    <script>
-        let lastScrollPosition = 0;
-        const sections = document.querySelectorAll('.section');
-
-        window.addEventListener('scroll', function() {
-            const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-            sections.forEach(section => {
-                const sectionPosition = section.getBoundingClientRect().top;
-                const screenHeight = window.innerHeight;
-                
-                if (sectionPosition < screenHeight * 0.75) {
-                    section.style.opacity = '1';
-                    section.style.transform = 'translateY(0)';
-                }
-            });
-
-            lastScrollPosition = currentScrollPosition;
-        });
-    </script>
 </body>
 </html>
