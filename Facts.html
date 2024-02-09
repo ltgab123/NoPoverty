@@ -116,7 +116,7 @@
                 sections.forEach(section => {
                     const sectionPosition = section.getBoundingClientRect().top;
                     const screenHeight = window.innerHeight;
-                    if (sectionPosition > screenHeight || sectionPosition < 0) {
+                    if (sectionPosition > screenHeight) {
                         section.style.opacity = '0';
                         section.style.transform = 'translateY(50px)';
                     }
