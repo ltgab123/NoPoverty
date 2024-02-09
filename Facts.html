@@ -112,10 +112,10 @@
                 });
             } else {
                 // Scrolling up
-                sections.forEach(section => {
+                sections.forEach((section, index) => {
                     const sectionPosition = section.getBoundingClientRect().top;
                     const screenHeight = window.innerHeight;
-                    if (sectionPosition > screenHeight || sectionPosition < 0) {
+                    if (index !== sections.length - 1 && sectionPosition > screenHeight || sectionPosition < 0) {
                         section.style.opacity = '0';
                         section.style.transform = 'translateY(50px)';
                     }
