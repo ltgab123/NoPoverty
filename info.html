@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Poverty Information Page</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Pacifico&display=swap" rel="stylesheet">
+<style>
+  /* Background */
+  body {
+    font-family: 'caveat';
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Professional background color */
+    background-image: url('city.jpg'); /* Add your background image URL */
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  /* Header and Footer Styles */
+  .navbar, .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  .navbar-logo, .footer-logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+  .navbar-menu, .footer-social {
+    list-style: none;
+    display: flex;
+  }
+  .navbar-menu li, .footer-social li {
+    margin-left: 20px;
+  }
+  .navbar-menu a, .footer-social a {
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .navbar-menu a:hover, .footer-social a:hover {
+    color: #5edaf0;
+  }
+
+  /* Content Styles */
+  .content {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  }
+  .info-section {
+    margin-bottom: 40px;
+  }
+  .info-title {
+    font-size: 50px;
+    color: #333;
+    margin-bottom: 10px;
+    list-style-image: url(bullet.png);
+  }
+  .info-text {
+    font-size: 35px;
+    line-height: 1.6;
+    color: #666;
+  }
+  .info-highlight {
+    color: #5edaf0;
+    font-weight: bold;
+  }
+
+   /* Responsive Grid */
+   .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+  }
+
+  /* CSS Transitions for grid items */
+  .grid-item {
+    padding: 1rem;
+    background-color: dodgerblue;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .grid-item:hover {
+    transform: scale(1.1);
+  }
+
+  /* Advanced CSS Selectors */
+  .grid-item:nth-of-type(odd) {
+    background-color: mediumseagreen;
+  }
+
+  /* Variable Fonts */
+  @font-face {
+    font-family: 'VariableFont';
+    src: url('path/to/variable-font.woff2') format('woff2-variations');
+    font-weight: 100 900;
+  }
+
+  /* Add more styles as needed */
+</style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="navbar">
+    <a href="#" class="navbar-logo">SDG 1</a>
+    <ul class="navbar-menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Content sections -->
+   <div class="info-section">
+    <h2 class="info-title">Understanding Poverty</h2>
+      <p class="info-text">
+        Poverty is a complex issue that affects millions of people worldwide. It's not just about the lack of financial resources, but also about the inability to access basic needs such as food, clean water, education, and healthcare. In many parts of the world, poverty is exacerbated by social discrimination and exclusion, as well as the lack of participation in decision-making.
+      </p>
+    </div>
+
+    <!-- Global Statistics Section -->
+    <div class="info-section">
+        <h2 class="info-title">Global Statistics</h2>
+        <p class="info-text">
+          As of 2019, it's estimated that <span class="info-highlight">85%</span> of the world's population lives on less than $30 a day, with two-thirds living on less than $10 a day, and <span class="info-highlight">10%</span> living on less than $1.90 a day.
+        </p>
+      </div>
+  
+      <!-- Efforts to Alleviate Poverty Section -->
+      <div class="info-section">
+        <h2 class="info-title">Efforts to Alleviate Poverty</h2>
+        <p class="info-text">
+          Various governments and non-governmental organizations are working towards poverty alleviation through policies and programs such as rural electrification and housing-first policies. The United Nations' Sustainable Development Goal 1 aims to end poverty in all its forms everywhere.
+        </p>
+      </div>
+  
+      <!-- Causes of Poverty Section -->
+      <div class="info-section">
+        <h2 class="info-title">Causes of Poverty</h2>
+        <p class="info-text">
+          The causes of poverty are diverse and interrelated. They include unemployment, social inequality, a lack of education, and environmental factors such as climate change and natural disasters. Addressing these root causes is essential for the eradication of poverty.
+        </p>
+      </div>
+  
+      <!-- Impact of Poverty Section -->
+      <div class="info-section">
+        <h2 class="info-title">Impact of Poverty</h2>
+        <p class="info-text">
+          Poverty has far-reaching effects on individuals and communities. It can lead to poor health, limited access to education, and reduced life expectancy. Poverty also affects societal structures, contributing to crime and social unrest.
+        </p>
+      </div>
+  
+      <!-- How to Help Section -->
+      <div class="info-section">
+        <h2 class="info-title">How to Help</h2>
+        <p class="info-text">
+          There are many ways to contribute to the fight against poverty. Donating to charities, volunteering, and advocating for policy changes are just a few examples. Educating oneself and others about the realities of poverty can also make a significant difference.
+        </p>
+      </div>
+    <!-- Add more sections with information about poverty -->
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <a href="#" class="footer-logo">SDG 1</a>
+    <ul class="footer-social">
+      <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+      <!-- Add more social links -->
+    </ul>
+  </div>
+
+  <!-- JavaScript for interactivity -->
+  <script>
+    // JavaScript to add interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(function(content) {
+        content.addEventListener('mouseover', function() {
+          this.style.backgroundColor = '#e3f2fd';
+        });
+        content.addEventListener('mouseout', function() {
+          this.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
